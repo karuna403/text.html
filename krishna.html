@@ -1,0 +1,607 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<style>
+
+
+  
+
+.xyz{
+  border:none;
+}
+.ert{
+  background-color: blueviolet;
+}
+#password,#account,#karuna{
+  display:none;
+}
+.abc{
+  margin-left:90px
+
+}
+</style>
+
+
+
+
+
+<div class="container">
+ <div class="d-flex justify-content-center align-items-center">
+  <div class="col-md-6">
+    <div class="card" id="mainpage">
+      <div class="card-header ert text-white text-center p-4">
+        <h4>HYPER</h4>
+      </div>
+      <div class="card-body">
+        <h6 class="text-center text-secondary">Sign in</h6>
+        <div class="col-md-8 abc  py-1 text-center">
+        
+        <p><small class="text-secondary">Enter your user name and password to access admin panel.</small></p>
+      
+        </div>
+        <form>
+          <div class="form-group mx-2 text-secondary">
+            <label for="formGroupExampleInput">User name</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" value="test">
+          </div>
+          <div class="form-group mx-2 text-secondary">
+            <div class="d-flex justify-content-between">
+            <label for="formGroupExampleInput">Password</label>
+            <label onclick="forgotpassword()"><small>Forgot your password?</small></label>
+            </div>
+            <input type="password" class="form-control" id="formGroupExampleInput" value="test">
+          </div>
+          <button class="btn btn-success" onclick="vbm()"><a href="#" class="text-white">Submit</a></button>
+          <div class="my-3 text-secondary">
+          <label><h6>User name:</h6></label>
+          <label>test</label>
+          <label class="ml-3"><h6>Password:</h6></label>
+          <label>test</label>
+          </div>
+        </form>
+      </div>
+    
+      <div class="card-footer text-secondary pt-4 pb-5 text-center" onclick="register()">
+                  
+                <label>Dont have an account</label>
+                <label><h6>Register</h6></label>
+              </div>
+              </div>
+            </div>
+          </div>
+      
+      
+     <div class="d-flex justify-content-center align-items-center">
+      <div class="col-md-6">
+       <div class="card" id="password">
+         <div class="card-header ert text-white text-center p-4">
+           <h4>HYPER</h4>
+         </div>
+         <div class="card-body">
+           <h6 class="text-center text-secondary">Reset Password</h6>
+           <div class="col-sm-8 abc py-1 text-center">
+           
+           <p><small class="text-secondary">Enter your email address and we'll send you an email with instructions to reset your password</small></p>
+         
+           </div>
+           <form>
+             <div class="form-group mx-2 text-secondary">
+               <label for="formGroupExampleInput"> Your Username</label>
+               <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter your username">
+             </div>
+             
+             <button class="btn btn-link btn-success text-white">Submit</button>
+             </form>
+            </div>
+          
+          
+  
+              <div class="card-footer text-center text-secondary pt-4 pb-5" onclick="backtosignin()">
+                  
+                <label>Back to</label>
+                <label><h6>Sign in</h6></label>
+              </div>
+              
+
+            </div>
+          </div>
+        
+          </div>
+        
+        <div class="d-flex justify-content-center align-items-center">
+        <div class="col-sm-6">
+          <div class="card" id="account">
+            <div class="card-header ert text-white text-center p-4">
+              <h4>HYPER</h4>
+            </div>
+            <div class="card-body">
+              <h6 class="text-center text-secondary">Create Your Account</h6>
+              <div class="col-sm-8 abc py-1 text-center">
+              
+              <p><small>Don't have an account?create your account,it takes lessthan a minute</small>
+            
+              </div>
+              <form>
+                <div class="form-group mx-2 text-secondary">
+                  <label for="formGroupExampleInput"> Full Name</label>
+                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter your name">
+                </div>  
+                <div class="form-group mx-2 text-secondary">
+                  <label for="formGroupExampleInput"> Email address</label>
+                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter your email">
+                </div> 
+                <div class="form-group mx-2 text-secondary">
+                  <label for="formGroupExampleInput"> Password</label>
+                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter your password">
+                </div>
+                <button class="btn btn-success">Submit</button>
+                </form>
+              </div>
+            
+                <div class=" card-footer text-secondary pt-4 pb-5" onclick="signin()">
+                  
+                  <label>Already have an account?</label>
+                  <label><h6>Sign in</h6></label>
+                </div>
+                </div>
+                </div>
+              </div>
+
+
+        <div class="container-fluid" id="karuna">
+            <div class="row">
+               <div class="col-md-3 bg-dark">
+                      <div class="row">
+                        <div class="col-md-12">
+                      <h3 class="text-white text-center">HYPER</h3>
+                      <div class="text-secondary">NAVIGATION</div>
+                      <div class="d-flex justify-content-between">
+                      <span class="text-secondary">Dashboard</span>
+                      <span class="badge badge-success">3</span>
+                      </div>
+                      <div class="dropdown mt-1 mb-1">
+                        <a class="btn btn-outline-dark dropdown-toggle text-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Apps
+                        </a>
+                      
+                        <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuLink">
+                          <a class="dropdown-item  text-secondary bg-dark" href="#">Calender</a>
+                          <div class="dropdown mt-1 mb-1">
+                          <a class="btn btn-dark dropdown-toggle text-secondary" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Projects</a>
+                           <div class="dropdown-menu bg-dark" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item  text-white" href="#">List</a>
+                            </div>
+                           
+                          </div>
+                      </div>
+                    </div>
+                    </div>
+                    
+                    <div class="col-md-12">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-outline-dark dropdown-toggle text-secondary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Pages
+                        </button>
+                        <div class="dropdown-menu bg-dark">
+                          <a class="dropdown-item text-secondary bg-dark" href="#">Starter</a>
+                          <a class="dropdown-item text-secondary bg-dark" href="#">Profile</a>
+                          <a class="dropdown-item text-secondary bg-dark" href="#">Error 404</a>
+                          <a class="dropdown-item text-secondary bg-dark" href="#">Error 500</a>
+                          </div>
+                      </div>
+                      </div>
+                      <div class="col-md-12">
+                        <div class="btn-group">
+                        <button type="button" class="btn btn-outline-dark dropdown-toggle text-secondary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        UI Kit
+                        </button>
+                        <div class="dropdown-menu bg-dark">
+                            <a class="dropdown-item text-secondary bg-dark" href="#">Buttons</a>
+                            <a class="dropdown-item text-secondary bg-dark" href="#">Card</a>
+                            <a class="dropdown-item text-secondary bg-dark" href="#">General</a>
+                            <a class="dropdown-item text-secondary bg-dark" href="#">Grid</a>
+                            <a class="dropdown-item text-secondary bg-dark" href="#">Icons</a>
+                            <a class="dropdown-item text-secondary bg-dark" href="#">Modals</a>
+                            <a class="dropdown-item text-secondary bg-dark" href="#">Notifications</a>
+                            <a class="dropdown-item text-secondary bg-dark" href="#">Spinners</a> 
+                            <a class="dropdown-item text-secondary bg-dark" href="#">Typography</a>
+                            <a class="dropdown-item text-secondary bg-dark" href="#">Widges</a>
+                        </div>
+                      </div>
+                      </div>
+
+
+
+
+
+
+                      <div class="col-md-12">
+                      
+                        <div class="btn-group">
+                          <button type="button" class="btn btn-outline-dark dropdown-toggle text-secondary" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Forms
+                          </button>
+                            <div class="dropdown-menu bg-dark">
+                              <a class="dropdown-item text-secondary bg-dark" href="#">Basic Elements</a>
+                              <a class="dropdown-item text-secondary bg-dark" href="#">Form Advanced</a>
+                              <a class="dropdown-item text-secondary bg-dark" href="#">Buttons</a>
+                              <a class="dropdown-item text-secondary bg-dark" href="#">File Upload</a>
+                              <a class="dropdown-item text-secondary bg-dark" href="#">Editors</a>
+                          
+                          </div>
+                          </div>
+                          </div>
+
+
+                          <div class="col-md-12">
+                          <div class="btn-group">
+                              <button type="button" class="btn btn-outline-dark dropdown-toggle text-secondary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                               Features 
+                              </button>
+                              <div class="dropdown-menu bg-dark">
+
+                                 <div class="col-md-12">
+                      
+                                  <div class="btn-group">
+                                    <button type="button" class="btn btn-outline-dark dropdown-toggle text-secondary" data-toggle="dropdown"
+                                      aria-haspopup="true" aria-expanded="false">
+                                      Charts
+                                    </button>
+                                    </div>
+                                    </div> 
+
+                                    <div class="col-md-12">
+                      
+                                        <div class="btn-group">
+                                          <button type="button" class="btn btn-outline-dark dropdown-toggle text-secondary" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            Tables
+                                          </button>
+                                          </div>
+                                      </div>
+
+                                  </div>  
+                              
+                            </div>
+                                
+                          </div>
+
+
+
+                          </div>
+                  </div>
+                  
+                  
+
+
+      <div class="col-md-9 bg-light pr-5">
+                      <div class="row">
+                        <div class="col-md-12">
+                        <nav class="navbar navbar-white bg-white">
+                            
+                            <div>
+                          <a class="navbar-brand" href="#">
+                            <img src="https://www.sccpre.cat/mypng/detail/346-3469657_3-lines-png-menu-bar-icon-png.png"
+                          height="15px" width="30px">
+                          </a>
+                        </div>
+                        
+                        <div>
+                            <a class="navbar-brand" href="#">
+                              <img src="https://previews.123rf.com/images/giamportone/giamportone1711/giamportone171100794/90849810-gear-vector-icon-settings-symbol.jpg"
+                            height="30px" width="30px">
+                            </a>
+                            
+                        <div class="btn-group">
+                              <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                
+                                  <img src="http://www.clker.com/cliparts/b/a/1/9/15168119862131955036free-clipart-bell-curve.hi.png"
+                                
+                                height="20px" width="20px">
+                                </a>
+
+                        <div class="dropdown-menu"> 
+                                 
+                                  <div class="pl-4 pr-3 text-secondary">
+                                  <div class="d-flex justify-content-between text-secondary">
+                                    <h6 class="mt-2 mb-3 dropdown-item text-secondary">Notifications</h6>
+                                    <span class="mt-2 mb-3 dropdown-item text-secondary">Clearall</span>
+                                  </div>
+                                  <div>Caleb Flalcelar commented on Admin</div>
+                                    <div><small>1 min ago</small></div>
+                                    <div class="mt-3">New User registred.</div>
+                                    <div><small>1 min ago</small></div>
+                                    <div class="mt-3">Cristinia Pride</div>
+                                    <div class="mb-4"><small>Hi, how are you? What about next meet</small></div>
+                                    <div class="text-center mb-2">View All</div>
+                                  
+                                </div>
+                              
+                                
+                              </div>
+                            </div>
+                            
+                        <div class="btn-group ml-3">
+                                <a class= "dropdown-toggle"   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <img src="https://www.accenture.com/t00010101T000000Z__w__/gb-en/_acnmedia/Accenture/Conversion-Assets/Careers/Images/Global_111/Accenture-Kathryn-Profile-Circle.jpg"
+                                  height="30px" width="30px"></a>
+                                
+                                  <div class="dropdown-menu">
+                                    <a class="dropdown-item mb-3 mt-1" href="#"><h6>Welcome!</h6></a>
+                                    <a class="dropdown-item" href="#">My account</a>
+                                    <a class="dropdown-item" href="#">Settings</a>
+                                    
+                                    <a class="dropdown-item" href="#">Lockscreen</a>
+                                    <a class="dropdown-item" href="#">Logout</a>
+                                    <a class="dropdown-item" href="#">Clear all</a>
+                                  </div>
+                        </div>
+                     </div>
+                          </div>
+                        </div>
+                      </nav>
+                      <div class="d-flex justify-content-between pt-3">
+                      <span>Dashboard</span>
+                      <div>
+                        <span class="text-secondary"><small>08-06-2019</small></span>
+                        <span class="badge badge-primary"><img src="https://encrypted-tbn0.gstatic.com/imges?q=tbn:ANd9GcS3Am-i6cdfTLV3L-Sgf37VbggcgwlqjmzKYXJoLkHDitlabu7-"
+                       height="20px" width="20px"></span>
+                       <span class="badge badge-primary"><img src="https://image.shutterstock.com/image-vector/reload-icon-vector-trendy-flat-260nw-742217827.jpg"
+                        height="20px" width="20px"></span>
+                       </div>
+                      </div>
+                      
+                      
+                      <div class="row">
+                      <div class="col-md-12 bg-white text-secondary mx-3 my-3">
+                        <div class="d-flex justify-content-between">
+                        <span class="mt-3">Customers</span>
+                      <span class="mt-3"> <button class="btn btn-light btn-link"><img src="http://www.imtradex.com/media/bjgkBBtLb9C8Qj2IjjdTY8nNTzM2L1BXlRhXtLIEUlNLEPtX8HR6PeUJOHLzJnw4fO1IzJnu5afJZJH8.png" height="25px"
+                        width="25px"></button></span>
+                      </div>
+
+                        <div class="mt-3">36,254</div>
+                        <div class="mt-3 mb-3"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiQ7LI0KGOkUdIxwVm9VW8_VyZes-ttm7n2xiZ8I9L3flJhEKS"
+                           height="15px" width="12px"><small class="text-success ml-1">5.27%</small><small class="ml-3">Since last month</small></div>
+                      </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 bg-white text-secondary mx-3 my-3">
+                          <div class="d-flex justify-content-between">
+                          <span class="mt-3">Orders</span>
+                        <span class="mt-3"> <button class="btn btn-light btn-link"><img src="https://icon-library.net/images/order-icon-png/order-icon-png-25.jpg"
+                           height="25px" width="25px"></button></span>
+                        </div>
+  
+                          <div class="mt-3">5,543</div>
+                          <div class="mt-3 mb-3 px-0"><img src="https://image.shutterstock.com/image-illustration/red-arrow-260nw-117392383.jpg"
+                             height="15px" width="12px"><small class="text-danger ml-1">1.08%</small><small class="ml-3">Since last month</small></div>
+                        </div>
+                      </div>  
+                      
+                      <div class="row">
+                          <div class="col-md-12 bg-white text-secondary mx-3 my-3">
+                            <div class="d-flex justify-content-between">
+                            <span class="mt-3">Revenue</span>
+                          <span class="mt-3"> <button class="btn btn-light btn-link">$</button></span>
+                          </div>
+    
+                            <div class="mt-3">$6,254</div>
+                            <div class="mt-3 mb-3 px-0"><img src="https://image.shutterstock.com/image-illustration/red-arrow-260nw-117392383.jpg"
+                               height="15px" width="12px"><small class="text-danger ml-1">7.00%</small><small class="ml-3">Since last month</small></div>
+                          </div>
+                        </div>
+                      
+                        
+                      
+
+                        <div class="row">
+                        <div class="col-md-12 bg-white text-secondary mx-3 my-3">
+                          <div class="d-flex justify-content-between mt-3">
+                          <span>Growth</span>
+                          <span><button class="btn btn-light btn-link"><img src="http://cdn.onlinewebfonts.com/svg/img_549432.png" height="20px" width="20px"></button></span>
+                          </div>
+                          <div class="mt-3">+30.56%</div>
+                          
+                          <div class="mt-3 mb-3"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiQ7LI0KGOkUdIxwVm9VW8_VyZes-ttm7n2xiZ8I9L3flJhEKS"
+                             height="15px" width="12px"><small class="text-success ml-1">4.87%%</small><small class="ml-3">Since last month</small></div>
+                        </div>
+                      </div>
+
+
+                        
+                          
+                          
+                          <div class="row">
+                              <div class="col-md-12">
+                                <div class="row">
+                                  <div class="col-md-12 bg-white text-secondary mx-3 my-3 py-3 d-flex justify-content-between">
+      
+                                    <label>PROJECTIONS VS ACTUVALS</label>
+                                     <label>:</label>
+                                  </div>
+                                 </div> 
+                                 <div class="row">
+                                    <div class="col-md-12 mx-3 my-3">
+                                      <img src="https://discourse.metabase.com/uploads/default/original/1X/41bcf3b2a00dc7cfaff01cb3165d35d32a85bf1d.png" height="250px"width="100%">
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 mx-3 my-3">
+                                  <img src="https://i.stack.imgur.com/sKtq1.png" height="250px"width="100%">
+                                </div>
+                              </div>
+
+                            
+                        <div class="row">
+                        <div class="col-md-12">
+                          <div class="row">
+                            <div class="col-md-12 bg-white text-secondary mx-3 my-3 py-3 d-flex justify-content-between">
+
+                              <label>REVENUE</label>
+                               <label>:</label>
+                            </div>
+                           </div> 
+                           <div class="row">
+                              <div class="col-md-12 bg-light text-secondary d-flex justify-content-between mx-3 my-3">
+                                <label><div>Curent Week</div><h4>.$58,254</h4></label>
+                                <label><div>Previous Week</div><h4>.$69,524</h4></label>
+                               
+                              </div>
+                            </div> 
+                            <div class="row">
+                              <div class="col-md-12 mx-3 my-3">
+
+                              
+                               
+                                <img src="https://www.ielts-exam.net/images/graphs/g29.gif" height="250px"width="100%">
+                              </div>
+                            </div>
+                          </div>
+                      </div> 
+                      
+                      
+                      <div class="row">
+                          <div class="col-md-12 mx-3 my-3 bg-white">
+                            <div class="row">
+                              <div class="col-md-12 pt-4 text-secondary">
+                            
+                            <div class="d-flex justify-content-between">
+                              <label><h4>TOP SELLING PRODUCTS</h4></label>
+                              <label>:</label>
+      
+                            </div>
+                          </div>
+                        </div>
+                            
+                        
+                           <table class="table text-secondary">
+                              <tbody>
+                                <tr>
+                                  <td><div>ASOS</div><div> Ridley High</div><div> Waist<div><small>07 April</small></div><div><small>2018</small></div></td>
+                                  <td>$79.49<div class="mt-2"><small>Price</small></div></td>
+                                  <td>82<div class="mt-2"><small>Quantity</small></div></td>
+                                  <td>$6,5<div class="mt-2"><small>Amo</small></div></td>
+
+                                </tr>
+                                 <tr>
+                                    <td>Macro<div>Lightweight</div><div>Shirt<div><small>25 March</small></div><div><small>2018</small></div></td>
+                                    <td>$79.49<div class="mt-2"><small>Price</small></div></td>
+                                    <td><div class="mt-2"><small>Quantity</small></div></td>
+                                    <td>$4,7<div class="mt-2"><small>Amo</small></div></td>
+  
+                                  </tr>
+                                  
+                                  <tr>
+                                      <td><div>Half Sleeve</div>Shirt<div><small>17 March</small></div><div><small>2018</small></div></td>
+                                      <td>$39.99<div class="mt-2"><small>Price</small></div></td>
+                                      <td>64<div class="mt-2"><small>Quantity</small></div></td>
+                                      <td>$2,5<div class="mt-2"><small>Amo</small></div></td>
+    
+                                    </tr>
+                                     <tr>
+                                        <td>Lightweight<div></div><div> Jacket<div><small>12 March</small></div><div><small>2018</small></div></td>
+                                        <td>$20.00<div class="mt-2"><small>Price</small></div></td>
+                                        <td>184<div class="mt-2"><small>Quantity</small></div></td>
+                                        <td>$3,6<div class="mt-2"><small>Amo</small></div></td>
+      
+                                      </tr> 
+                                      <tr>
+                                          <td>Macro<div> Shoes</div><small>05 March</small></div><div><small>2018</small></div></td>
+                                          <td>$28.49<div class="mt-2"><small>Price</small></div></td>
+                                          <td>69<div class="mt-2"><small>Quantity</small></div></td>
+                                          <td>$1,9<div class="mt-2"><small>Amo</small></div></td>
+        
+                                        </tr>
+                                      
+                                      </tbody>
+
+                            </table>
+                          </div>
+                        </div>
+                
+                      
+                      
+                  </div>
+
+
+                  
+                  
+                  
+                  </div>
+            </div>
+
+
+
+            
+ 
+
+          
+                  
+</div>
+
+
+<script>
+function forgotpassword(){
+$("#password").show('password');
+$("#mainpage").hide('mainpage');
+}
+function backtosignin(){
+
+$("#password").hide('password');
+$("#mainpage").show('mainpage');
+}
+
+function register(){
+$("#account").show('account'); 
+$("#mainpage").hide('mainpage');
+}
+function signin(){
+$("#account").hide('account');
+$("#mainpage").show('mainpage');
+}
+function vbm(){
+$("#karuna").show('karuna');
+$("#mainpage").hide('mainpage');
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+    
+
+
+       
+ 
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
