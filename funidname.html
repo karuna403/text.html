@@ -1,0 +1,29 @@
+<script>
+
+function idname(){
+    var abc=[{
+id:1,
+name:"karuna",
+per:"40%"
+},
+
+{
+id:2,
+name:"sowji",
+per:"50%"
+
+}]
+
+    var xyz=abc.map(function(value,index){
+      return  {  id:value.id,
+       name:value.name}
+    })
+
+    console.log(xyz)
+}
+
+idname()
+
+
+
+</script>
